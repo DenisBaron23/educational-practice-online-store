@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категория - Интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+     <header>
+        <div class="container">
+            <div class="logo">
+               <a href="index.html"><img src="img/img1.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <nav>
+                <a href="#company">О КОМПАНИИ</a>
+                <a href="#delivery">ОПЛАТА И ДОСТАВКА</a>
+                <a href="#warranty">ГАРАНТИЯ</a>
+                <a href="#service">СЕРВИС</a>
+                <a href="#credit">КРЕДИТ</a>
+                <a href="#trade">TRADE-IN</a>
+            </nav>
+           <div class="user-actions">
+            <a href="#account" class="action-link">
+                <span class="icon">👤</span>
+                <span>ЛИЧНЫЙ КАБИНЕТ</span>
+            </a>
+            <a href="#favorites" class="action-link">
+                <span class="icon">♡</span>
+                <span>ИЗБРАННОЕ</span>
+            </a>
+            <a href="cart.html" class="action-link">
+                <span class="icon">🛒</span>
+                <span>КОРЗИНА</span>
+            </a>
+        </div></div>
+        </div>
+    </header>
+
+   
+
+        <h2 id="category-title">Товары категории</h2>
+
+        <div class="category-layout">
+            <!-- Боковая панель с фильтрами -->
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Фильтры</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Цена</h4>
+                        <div class="price-filter">
+                            <div class="price-inputs">
+                                <input type="number" id="price-min" placeholder="От" min="0">
+                                <span>—</span>
+                                <input type="number" id="price-max" placeholder="До" min="0">
+                            </div>
+                            <div class="price-range">
+                                <input type="range" id="price-slider" min="0" max="100000" step="1000" value="100000">
+                                <div class="price-values">
+                                    <span>0 ₽</span>
+                                    <span id="max-price-label">100000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Рейтинг</h4>
+                        <div class="rating-filter">
+                            <label>
+                                <input type="checkbox" value="5" class="rating-checkbox">
+                                <span class="stars">★★★★★</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="4" class="rating-checkbox">
+                                <span class="stars">★★★★☆</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="3" class="rating-checkbox">
+                                <span class="stars">★★★☆☆</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="2" class="rating-checkbox">
+                                <span class="stars">★★☆☆☆</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="reset-filters" class="btn-secondary">Сбросить фильтры</button>
+                </div>
+            </aside>
+
+            <!-- Основная область с товарами -->
+            <div class="products-area">
+                <div class="products-header">
+                    <div class="results-count">
+                        Найдено товаров: <span id="results-count">0</span>
+                    </div>
+                    <div class="sort-options">
+                        <label for="sort-select">Сортировать:</label>
+                        <select id="sort-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="price-asc">Цена: по возрастанию</option>
+                            <option value="price-desc">Цена: по убыванию</option>
+                            <option value="rating-desc">Рейтинг: по убыванию</option>
+                            <option value="name-asc">Название: А-Я</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="products-grid" class="products-grid">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>

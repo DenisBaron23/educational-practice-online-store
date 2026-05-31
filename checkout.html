@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - TECHRISE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+               <a href="index.html"><img src="img/img1.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <nav>
+                <a href="#company">О КОМПАНИИ</a>
+                <a href="#delivery">ОПЛАТА И ДОСТАВКА</a>
+                <a href="#warranty">ГАРАНТИЯ</a>
+                <a href="#service">СЕРВИС</a>
+                <a href="#credit">КРЕДИТ</a>
+                <a href="#trade">TRADE-IN</a>
+                <a href="#contacts">КОНТАКТЫ</a>
+            </nav>
+            <div class="phone">
+                ПН-ПТ с 9:30 до 02:30<br>
+                СБ-ВС С 07:30 до 20:00<br>
+                +7 (913) 768-18-11
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-main">
+            <div class="checkout-wrapper">
+                <h1 class="page-title">Оформление заказа</h1>
+                <p class="breadcrumb">Главная › Каталог товаров › Оформление заказа</p>
+
+                <div class="checkout-content">
+                    <form class="checkout-form" id="orderForm">
+                        <div class="form-section">
+                            <h2 class="form-title">Личные данные</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Имя *</label>
+                                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Телефон *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="email">E-Mail *</label>
+                                    <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="address">Адрес доставки *</label>
+                                    <input type="text" id="address" name="address" placeholder="Адрес Доставки" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">ЗАКАЗАТЬ</button>
+                    </form>
+
+                    <div class="order-summary">
+                        <div class="summary-header">
+                            <h2>Корзина</h2>
+                            <a href="cart.html" class="edit-link">Изменить</a>
+                        </div>
+
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>ТОВАРЫ</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>СУММА</span>
+                            </div>
+                            
+                            <div class="summary-row total-row">
+                                <span>ИТОГО</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
